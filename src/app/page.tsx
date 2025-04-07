@@ -1,103 +1,76 @@
-import Image from "next/image";
+import Link from "next/link";
+import EducationCard from "@/components/EducationCard";
+// import ExperienceCard from "@/components/ExperienceCard";
+import ProjectCard from "@/components/ProjectCard";
+import SkillCard from "@/components/SkillCard";
+import ResearchInterestCard from "@/components/ResearchInterestsCard";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="space-y-16">
+      {/* Bio Section */}
+      <section className="text-center mt-12">
+        <h1 className="text-5xl font-extrabold text-gray-900">Hi, I'm Rohith Kambampati</h1>
+        <p className="text-xl text-gray-600 mt-4">A passionate Software Engineer with a focus on Signal Processing, Communication Engineering, and Machine Learning.</p>
+        <Link href="/#contact" className="mt-6 inline-block bg-blue-600 text-white py-2 px-6 rounded-md shadow-md hover:bg-blue-500">
+          Get in Touch
+        </Link>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Education Section */}
+      <section>
+        <h2 className="text-3xl font-bold text-gray-800 mb-4">Education</h2>
+        <div className="mt-6">
+          <EducationCard university="University of Glasgow, UK" degree="MSc in Electronics and Electrical Engineering" courses={["Digital Signal Processing", "Navigation Systems", "Real-time Embedded Systems", "Micro and Nano technology", "Biosensors and diagnostics", "Power Electronics and Drives", "Control"]} thesis="A web application to predict heart disease risk using Machine Learning" advisor="Dr. Martin Lavery" year="2022 - 2023" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="mt-6">
+          <EducationCard university="Shiv Nadar University, India" degree="B.Tech in Electronics and communication engineering" courses={["Digital Signal Processing", "Digital Communication", "Communication Engineering", "Graph Signal Processing", "Information theory and coding", "Applied Machine Learning", "Machine Learning through R", "Micorwave engineering", "VLSI Technology and Design", "Embedded Systems Hardware", "Design of Analog CMOS circuits"]} thesis="Physical layer security for Cooperative systems: Relay Selection using GSP" advisor="Prof. Vijay Kumar Chakka" year="2017 - 2021" />
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section>
+        <h2 className="text-3xl font-bold text-gray-800 mb-4">Projects</h2>
+        <div className="space-y-6 mt-6">
+          <ProjectCard title="ResearchDigest web application" description="Given that I am on the path to pursue my PhD studies, where reading and analyzing a large volume of research articles is essential, I wanted to build a tool to enhance my efficiency. The abstract often plays a crucial role in determining whether a paper is worth exploring further. To streamline this process, I envisioned a solution that would collect abstracts and corresponding links to research papers in one centralized place. This would allow me to quickly scan through multiple abstracts and filter out the papers most relevant to my interests. ResearchDigest was conceived to address this very need." link="https://github.com/R0h1thKambampat1/research-digest-web-app" linkToLiveSite="https://research-digest-web-app.onrender.com/" />
+          <ProjectCard title="Track-Record" description="This project was part of the course Real-time Embedded systems I completed during my masters studies. Track-Record is a face tracking system built on the Raspberry Pi 3B platform, using a Pi Camera Module and servo motors for real-time face detection and tracking. A GUI is also implemented which communicates via a server sending commands to the Raspberry Pi." link="https://github.com/oscell/Track-Record" />
+          <ProjectCard title="Physical layer security for Cooperative systems: Relay Selection using GSP" description="As part of this project, I investigated the application of Graph Signal Processing (GSP) within cooperative relay networks. I explored how GSP techniques could be leveraged to improve physical layer security, particularly in scenarios involving potential eavesdroppers." link="https://github.com/R0h1thKambampat1/Physical-layer-security" />
+          <ProjectCard title="A web application to predict heart disease risk prediction using Machine Learning" description="I focused on the statistical aspects of machine learning, exploring which algorithms are best suited for specific conditions and dataset characteristics, particularly in practical applications like heart disease risk prediction. Through this project, I compared the performance of various machine learning models under different scenarios to determine the most suitable algorithms based on the use case. As part of my project, I developed a full-stack application using React for the frontend and Flask for the backend, integrating machine learning models built in Python." link="https://github.com/R0h1thKambampat1/heart-disease-risk-prediction-using-ml" />
+          <ProjectCard title="Physical layer security using pilot contamination detection technique" description="Developed a Python-based framework to detect pilot contamination attacks in multi-user MIMO systems, a key security threat at the physical layer.	Implemented a statistical detection algorithm using signal correlation analysis to identify malicious pilot sequences in simulated 5G environments." link="https://github.com/R0h1thKambampat1/Physical-layer-security-using-pilot-contamination-detection" />
+          <ProjectCard title="Blind Channel estimation techniques in wireless systems" description="Designed and implemented a suite of blind channel estimation algorithms in Python to recover channel state information (CSI) without pilot signals, targeting MIMO-based wireless systems.Explored MUSIC algorithm, Deep neural networks using TensorFlow, Bussgang algorithm, constant modulus algorithm, SVD for blind channel estimation." link="https://github.com/R0h1thKambampat1/Universal-image-quality-index" />
+          <ProjectCard title="Universal Image Quality Index" description="This project was part of the course Digital Signal Processing I completed during my undergraduate studies. It involves a MATLAB implementation based on a research paper with the same title." link="https://github.com/R0h1thKambampat1/Universal-image-quality-index" />
+        </div>
+      </section>
+      {/* Skills Section */}
+      <section>
+        <h2 className="text-3xl font-bold text-gray-800 mb-4">Skills</h2>
+        <h3 className="text-xl font-bold text-gray-800 mb-4">Programming Languages and frameworks</h3>
+        <SkillCard skills={["Python", "MATLAB", "Simulink", "Verilog", "C", "C++", "Java", "JavaScript", "TypeScript"]}></SkillCard>
+        <h3 className="text-xl font-bold text-gray-800 mb-4">Full stack technologies</h3>
+        <SkillCard skills={["Angular", "React", "Next", "Django", "Flask", "Springboot", "Node", "Express", "MongoDB"]}></SkillCard>
+        <h3 className="text-xl font-bold text-gray-800 mb-4">Simulation and design tools</h3>
+        <SkillCard skills={["LT Spice", "Cadence", "Ki-Cad"]}></SkillCard>
+        <h3 className="text-xl font-bold text-gray-800 mb-4">Others</h3>
+        <SkillCard skills={["Visual Studio Code", "Jupter Notebook"]}></SkillCard>
+      </section>
+      {/* Research Interests Section */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-800 mb-4">Research Interests</h2>
+        <ResearchInterestCard interests={["Information Theory", "Graph Signal Processing", "Communication Systems", "Channel Estimation", "Delay Doppler communications", "6G and beyond Technologies", "Semantic Communications", "Machine Learning", "AGI"]} />
+      </section>
+
+      {/* Contact & Links Section */}
+      <section id="contact" className="text-center mt-16 mb-8">
+        <h2 className="text-3xl font-bold text-gray-800">Contact & Links</h2>
+        <div className="mt-4">
+          <Link href="https://github.com/R0h1thKambampat1" className="text-blue-600 hover:underline mr-6">
+            GitHub
+          </Link>
+          <Link href="https://www.linkedin.com/in/rohith-kambampati-787431149/" className="text-blue-600 hover:underline">
+            LinkedIn
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }
