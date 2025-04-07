@@ -10,8 +10,8 @@ export default function Home() {
     <main className="space-y-16">
       {/* Bio Section */}
       <section className="text-center mt-12">
-        <h1 className="text-5xl font-extrabold text-gray-900">Hi, I'm Rohith Kambampati</h1>
-        <p className="text-xl text-gray-600 mt-4">A passionate Software Engineer with a focus on Signal Processing, Communication Engineering, and Machine Learning.</p>
+        <h1 className="text-5xl font-extrabold text-gray-900">Hi, I&rsquo;m Rohith Kambampati</h1>
+        <p className="text-xl text-gray-600 mt-4">I have a Master&rsquo;s in Electronics and Electrical Engineering, and a Bachelor&rsquo;s in Electronics and Communication engienering from University of Glasgow and Shiv Nadar University respectively. My academic journey has deepened my passion for digital signal processing, communication theory, machine learning and information theory. With experience in full-stack development, embedded systems, and microcontroller programming, I have worked on a variety of projects that combinemy interests. I am particularly interested in pursuing research in Signal Processing, next gen communication technologies, Information Theory. My goal is to leverage my diverse skill set to contribute to cutting-edge research in communication systems and signal processing.</p>
         <Link href="/#contact" className="mt-6 inline-block bg-blue-600 text-white py-2 px-6 rounded-md shadow-md hover:bg-blue-500">
           Get in Touch
         </Link>
