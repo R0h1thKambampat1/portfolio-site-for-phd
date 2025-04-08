@@ -1,4 +1,13 @@
-export default function EducationCard({ university, degree, courses, thesis, advisor, year }: Readonly<{ university: string; degree: string; courses: string[]; thesis: string; advisor: string; year: string }>) {
+type EducationCardProps = {
+  university: string;
+  degree: string;
+  courses: string[];
+  thesis: string;
+  advisor: string;
+  year: string;
+};
+
+export default function EducationCard({ university, degree, courses, thesis, advisor, year }: Readonly<EducationCardProps>) {
   return (
     <div className="border border-gray-300 rounded-lg p-6">
       <h3 className="text-2xl font-semibold">{university}</h3>

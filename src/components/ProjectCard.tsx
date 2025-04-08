@@ -1,5 +1,11 @@
+type ProjectCardProps = {
+  title: string;
+  description: string;
+  link?: string;
+  linkToLiveSite?: string;
+};
 import Link from "next/link";
-export default function ProjectCard({ title, description, link, linkToLiveSite }: Readonly<{ title: string; description: string; link?: string; linkToLiveSite?: string }>) {
+export default function ProjectCard({ title, description, link, linkToLiveSite }: Readonly<ProjectCardProps>) {
   return (
     <div className="border border-gray-300 rounded-lg p-6">
       <h3 className="font-semibold text-xl">{title}</h3>

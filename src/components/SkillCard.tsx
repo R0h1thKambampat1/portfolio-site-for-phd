@@ -1,4 +1,8 @@
-export default function SkillCard({ skills = [] }: Readonly<{ skills?: string[] }>) {
+type SkillCardProps = {
+  skills?: string[];
+};
+
+export default function SkillCard({ skills = [] }: Readonly<SkillCardProps>) {
   return (
     <div className="border border-gray-300 rounded-lg p-6 shadow-sm mb-4">
       {skills && skills.length > 0 && (

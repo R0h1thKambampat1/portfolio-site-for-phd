@@ -1,7 +1,12 @@
 import { getArticle } from "@/lib/markdown";
 import Link from "next/link";
 
-export default async function ArticlePage({ params }: { params: { slug: string } }) {
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+export default async function ArticlePage({ params }: Readonly<Props>) {
   const { slug } = params;
   const article = await getArticle(slug);
 
