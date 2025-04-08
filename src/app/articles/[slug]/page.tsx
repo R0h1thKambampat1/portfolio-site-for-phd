@@ -6,7 +6,7 @@ type Props = {
     slug: string;
   };
 };
-export default async function ArticlePage({ params }: Readonly<Props>) {
+export default async function ArticlePage({ params }: Props) {
   const { slug } = params;
   const article = await getArticle(slug);
 

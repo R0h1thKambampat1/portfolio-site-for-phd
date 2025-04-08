@@ -2,7 +2,7 @@ type ResearchInterestCardProps = {
   interests?: string[];
 };
 
-export default function ResearchInterestCard({ interests = [] }: Readonly<ResearchInterestCardProps>) {
+export default function ResearchInterestCard({ interests = [] }: ResearchInterestCardProps) {
   return (
     <div className="border border-gray-300 rounded-lg p-6 shadow-sm">
       {interests && interests.length > 0 && (
