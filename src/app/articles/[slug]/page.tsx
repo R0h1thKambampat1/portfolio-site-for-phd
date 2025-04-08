@@ -1,30 +1,28 @@
 import { getArticle } from "@/lib/markdown";
 import Link from "next/link";
+// Import KaTeX CSS
+import "katex/dist/katex.min.css";
 
-// Define the type for the resolved params
 type Params = {
   slug: string;
 };
 
-// Define the type for the article (must match the return type of getArticle)
 type Article = {
   title: string;
   date: string;
   summary: string;
-  tags: string[]; // Explicitly an array of strings
+  tags: string[];
   contentHtml: string;
 };
 
-// Use a type that matches Next.js expectations: params is a Promise
 type Props = {
   params: Promise<Params>;
 };
 
 export default async function ArticlePage({ params }: Props) {
   try {
-    // Await the params Promise to get the slug
     const { slug } = await params;
-    const article: Article = await getArticle(slug); // Explicitly type the article
+    const article: Article = await getArticle(slug);
 
     return (
       <main className="p-8 max-w-4xl mx-auto">
@@ -32,7 +30,6 @@ export default async function ArticlePage({ params }: Props) {
         <header className="mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">{article.title}</h1>
           <p className="text-sm text-gray-500 mb-4">{article.date}</p>
-          {/* Tags */}
           <div className="flex flex-wrap gap-2">
             {article.tags?.length > 0 &&
               article.tags.map(tag => (
