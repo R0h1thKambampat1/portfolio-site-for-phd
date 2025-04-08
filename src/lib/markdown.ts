@@ -18,7 +18,7 @@ export function getAllArticles() {
       title: data.title,
       date: data.date,
       summary: data.summary,
-      tags: data.tags || []
+      tags: (data.tags as string[]) || []
     };
   });
 }

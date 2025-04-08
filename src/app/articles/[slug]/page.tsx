@@ -1,15 +1,30 @@
 import { getArticle } from "@/lib/markdown";
 import Link from "next/link";
 
-type Props = {
-  params: {
-    slug: string;
-  };
+// Define the type for the resolved params
+type Params = {
+  slug: string;
 };
+
+// Define the type for the article (must match the return type of getArticle)
+type Article = {
+  title: string;
+  date: string;
+  summary: string;
+  tags: string[]; // Explicitly an array of strings
+  contentHtml: string;
+};
+
+// Use a type that matches Next.js expectations: params is a Promise
+type Props = {
+  params: Promise<Params>;
+};
+
 export default async function ArticlePage({ params }: Props) {
   try {
-    const { slug } = params;
-    const article = await getArticle(slug);
+    // Await the params Promise to get the slug
+    const { slug } = await params;
+    const article: Article = await getArticle(slug); // Explicitly type the article
 
     return (
       <main className="p-8 max-w-4xl mx-auto">
@@ -30,7 +45,6 @@ export default async function ArticlePage({ params }: Props) {
 
         {/* Article Content */}
         <article className="prose prose-lg max-w-none text-gray-800">
-          {/* Using dangerouslySetInnerHTML to render the article content */}
           <div dangerouslySetInnerHTML={{ __html: article.contentHtml }} />
         </article>
 
