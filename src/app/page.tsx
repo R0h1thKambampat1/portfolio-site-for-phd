@@ -24,7 +24,7 @@ export default function Home() {
           <EducationCard university="University of Glasgow, UK" degree="MSc in Electronics and Electrical Engineering" courses={["Digital Signal Processing", "Navigation Systems", "Real-time Embedded Systems", "Micro and Nano technology", "Biosensors and diagnostics", "Power Electronics and Drives", "Control"]} thesis="A web application to predict heart disease risk using Machine Learning" advisor="Dr. Martin Lavery" year="2022 - 2023" />
         </div>
         <div className="mt-6">
-          <EducationCard university="Shiv Nadar University, India" degree="B.Tech in Electronics and communication engineering" courses={["Digital Signal Processing", "Digital Communication", "Communication Engineering", "Graph Signal Processing", "Information theory and coding", "Applied Machine Learning", "Machine Learning through R", "Micorwave engineering", "VLSI Technology and Design", "Embedded Systems Hardware", "Design of Analog CMOS circuits"]} thesis="Physical layer security for Cooperative systems: Relay Selection using GSP" advisor="Prof. Vijay Kumar Chakka" year="2017 - 2021" />
+          <EducationCard university="Shiv Nadar University, India" degree="B.Tech in Electronics and communication engineering" courses={["Digital Signal Processing", "Digital Communication", "Communication Engineering", "Graph Signal Processing", "Information theory and coding", "Applied Machine Learning", "Machine Learning through R", "Micorwave engineering", "VLSI Technology and Design", "Embedded Systems Hardware", "Design of Analog CMOS circuits", "Data Structures and Algorithms"]} thesis="Physical layer security for Cooperative systems: Relay Selection using GSP" advisor="Prof. Vijay Kumar Chakka" year="2017 - 2021" />
         </div>
       </section>
 
@@ -38,6 +38,7 @@ export default function Home() {
           <ProjectCard title="A web application to predict heart disease risk prediction using Machine Learning" description="I focused on the statistical aspects of machine learning, exploring which algorithms are best suited for specific conditions and dataset characteristics, particularly in practical applications like heart disease risk prediction. Through this project, I compared the performance of various machine learning models under different scenarios to determine the most suitable algorithms based on the use case. As part of my project, I developed a full-stack application using React for the frontend and Flask for the backend, integrating machine learning models built in Python." link="https://github.com/R0h1thKambampat1/heart-disease-risk-prediction-using-ml" />
           <ProjectCard title="Physical layer security using pilot contamination detection technique" description="Developed a Python-based framework to detect pilot contamination attacks in multi-user MIMO systems, a key security threat at the physical layer.	Implemented a statistical detection algorithm using signal correlation analysis to identify malicious pilot sequences in simulated 5G environments." link="https://github.com/R0h1thKambampat1/Physical-layer-security-using-pilot-contamination-detection" />
           <ProjectCard title="Blind Channel estimation techniques in wireless systems" description="Designed and implemented a suite of blind channel estimation algorithms in Python to recover channel state information (CSI) without pilot signals, targeting MIMO-based wireless systems.Explored MUSIC algorithm, Deep neural networks using TensorFlow, Bussgang algorithm, constant modulus algorithm, SVD for blind channel estimation." link="https://github.com/R0h1thKambampat1/Universal-image-quality-index" />
+          <ProjectCard title="Deep learning model for channel estimation in cell free MIMO " description="Developed a deep learning model using TensorFlow to estimate channel state information (CSI) in a simulated cell-free MIMO network. Generated synthetic complex-valued pilot and channel datasets and trained a fully connected neural network for accurate CSI prediction under varying SNR conditions." link="https://github.com/R0h1thKambampat1/deep-learning-based-channel-estimation-for-cell-free-networks" />
           <ProjectCard title="Universal Image Quality Index" description="This project was part of the course Digital Signal Processing I completed during my undergraduate studies. It involves a MATLAB implementation based on a research paper with the same title." link="https://github.com/R0h1thKambampat1/Universal-image-quality-index" />
         </div>
       </section>
@@ -45,7 +46,7 @@ export default function Home() {
       <section>
         <h2 className="text-3xl font-bold text-gray-800 mb-4">Skills</h2>
         <h3 className="text-xl font-bold text-gray-800 mb-4">Programming Languages and frameworks</h3>
-        <SkillCard skills={["Python", "MATLAB", "Simulink", "Verilog", "C", "C++", "Java", "JavaScript", "TypeScript"]}></SkillCard>
+        <SkillCard skills={["Python", "MATLAB", "Simulink", "Verilog", "R", "C", "C++", "Java", "JavaScript", "TypeScript"]}></SkillCard>
         <h3 className="text-xl font-bold text-gray-800 mb-4">Full stack technologies</h3>
         <SkillCard skills={["Angular", "React", "Next", "Django", "Flask", "Springboot", "Node", "Express", "MongoDB"]}></SkillCard>
         <h3 className="text-xl font-bold text-gray-800 mb-4">Simulation and design tools</h3>
@@ -56,7 +57,7 @@ export default function Home() {
       {/* Research Interests Section */}
       <section className="mb-12">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">Research Interests</h2>
-        <ResearchInterestCard interests={["Information Theory", "Graph Signal Processing", "Communication Systems", "Channel Estimation", "Delay Doppler communications", "6G and beyond Technologies", "Semantic Communications", "Machine Learning", "AGI"]} />
+        <ResearchInterestCard interests={["Information Theory", "Graph Signal Processing", "Communication Systems", "Semi and Blind Channel Estimation", "Delay Doppler communications", "6G and beyond Technologies", "Semantic Communications", "Machine Learning", "AGI"]} />
       </section>
 
       {/* Contact & Links Section */}
